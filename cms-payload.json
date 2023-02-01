@@ -1,0 +1,440 @@
+{
+  "pages": [
+    {
+      "slug": "en",
+      "locale": "en",
+      "seo": {
+        "description": "The best app for practicing music. Remove vocals, separate instruments, master your tracks, and remix songs with the power of AI. Try it today!",
+        "title": "Moises App: The Musician's App | Vocal Remover & much more | Moises App"
+      },
+      "menu": [
+        {
+          "item": "Products",
+          "subitems": [
+            { "item": "Moises App" },
+            { "item": "Moises Web App" },
+            { "item": "Moises iPad App" }
+          ]
+        },
+        {
+          "item": "Features",
+          "subitems": [
+            { "item": "AI Audio Separation" },
+            { "item": "Smart Metronome & Audio Speed Changer" },
+            { "item": "Pitch Changer & AI Key Detection" },
+            { "item": "Chord Detection" },
+            { "item": "AI Songwriter" }
+          ]
+        },
+        {
+          "item": "Made For",
+          "subitems": [
+            { "item": "Drummers" },
+            { "item": "Singers" },
+            { "item": "Bassists" },
+            { "item": "Guitarists" },
+            { "item": "Producers and DJ's" }
+          ]
+        },
+        { "item": "Education" },
+        { "item": "Business API" },
+        { "item": "Blog" },
+        { "item": "Login" },
+        { "item": "Signup" }
+      ],
+      "contentSections": [
+        {
+          "name": "hero",
+          "data": {
+            "backgroundImage": "https://moises.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2Fhome_01_ghost_highlight_desktop_67eb8566fc%2Fhome_01_ghost_highlight_desktop_67eb8566fc.png&w=3840&q=100",
+            "title": "The Musician’s App",
+            "description": "Play with your favorite artists in any key, at any speed. Remove vocals and instruments in any song. Discover the ultimate immersive practice experience powered by AI.",
+            "ctaButton": "Sign Up",
+            "belowLinks": "START FREE",
+            "links": [
+              {
+                "image": "https://storage.googleapis.com/moises-cms/app_store_3279bb50bd/app_store_3279bb50bd.svg",
+                "url": "https://apps.apple.com/app/apple-store/id1515796612?pt=121597498&ct=home_hero&mt=8"
+              },
+              {
+                "image": "https://storage.googleapis.com/moises-cms/app_google_play_1_3cdc01c8aa/app_google_play_1_3cdc01c8aa.svg",
+                "url": "https://play.google.com/store/apps/details?id=ai.moises&referrer=utm_source%3Dhome_hero%26utm_medium%3Dwww%26utm_campaign%3Dhome_hero"
+              }
+            ]
+          }
+        },
+        {
+          "name": "simple_horizontal",
+          "data": {
+            "title": "More than an app: a music partner.",
+            "subtitle": "Your private library accessible from any device, stored securely in the cloud.",
+            "image": "https://moises.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2FDevices_wiht_ipad_bce87d9f5f%2FDevices_wiht_ipad_bce87d9f5f.png&w=3840&q=100"
+          }
+        },
+        {
+          "name": "simple_headline",
+          "data": {
+            "title": "GAME CHANGER",
+            "subtitle": "Everything in one experience.",
+            "description": "Remove or isolate vocals and instruments in any song. Adjust the speed, change the pitch, and enable metronome counts."
+          }
+        },
+        {
+          "name": "stacked_list",
+          "items": [
+            {
+              "backgroundImage": "https://moises.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2Fhome_06_bg_desktop_16a77c84c4%2Fhome_06_bg_desktop_16a77c84c4.jpg&w=3840&q=100",
+              "image": "https://moises.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2Fhome_06_highlight_desktop_2x_f5e34b557c%2Fhome_06_highlight_desktop_2x_f5e34b557c.png&w=1920&q=100",
+              "imagePosition": "left",
+              "ctaHighlightText": "AI Audio Separation",
+              "ctaRegularText": "Play along with your favorite artists.",
+              "description": "Easily separate vocals, drums, guitar, bass, keys, and other instruments in any song. Isolate instruments or mute tracks in 1-click.",
+              "button": "Learn More"
+            },
+            {
+              "backgroundImage": "https://moises.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2Fhome_07_bg_desktop_e1d405e563%2Fhome_07_bg_desktop_e1d405e563.jpg&w=3840&q=100",
+              "image": "https://moises.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2Fhome_07_highlight_desktop_2x_5bb7c24f70%2Fhome_07_highlight_desktop_2x_5bb7c24f70.png&w=1920&q=100",
+              "imagePosition": "right",
+              "ctaHighlightText": "Smart Metronome & Audio Speed Changer",
+              "ctaRegularText": "Practice at your own pace.",
+              "description": "Instantly generate click tracks that are in sync with any song. Slow down or speed up with 1-click. Moises automatically detects and displays the BPM.",
+              "button": "Discover Now"
+            },
+            {
+              "backgroundImage": "https://moises.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2Fhome_08_bg_desktop_713dd9329e%2Fhome_08_bg_desktop_713dd9329e.jpg&w=828&q=100",
+              "image": "https://moises.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2Fhome_08_highlight_desktop_2x_7a99141994%2Fhome_08_highlight_desktop_2x_7a99141994.png&w=1920&q=100",
+              "imagePosition": "left",
+              "ctaHighlightText": "Pitch Changer & AI Key Detection",
+              "ctaRegularText": "The end of creative limitation.",
+              "description": "Control and change the key with 1-click. Shift the pitch to meet your vocal range or play in any key without a capo. Learn the key signature of any song.",
+              "button": "Learn More"
+            },
+            {
+              "backgroundImage": "https://moises.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2Fhome_09_bg_desktop_2f9c5a5128%2Fhome_09_bg_desktop_2f9c5a5128.jpg&w=3840&q=100",
+              "image": "https://moises.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2Fhome_09_highlight_desktop_2x_bffd4776a6%2Fhome_09_highlight_desktop_2x_bffd4776a6.png&w=1920&q=100",
+              "imagePosition": "right",
+              "ctaHighlightText": "Chords Detection",
+              "ctaRegularText": "Master your craft playing the music you love.",
+              "description": "Detect and display chords in real time. Use the Pitch Changer to instantly transpose chords to the key of your choice for any song.",
+              "button": "Discover Now"
+            }
+          ]
+        }
+      ],
+      "footer": {
+        "sections": [
+          {
+            "name": "HOW TO",
+            "list": [
+              {
+                "label": "Remove vocals from a song",
+                "url": "https://moises.ai/1"
+              },
+              {
+                "label": "Separate vocals from a song",
+                "url": "https://moises.ai/2"
+              },
+              {
+                "label": "Master a song",
+                "url": "https://moises.ai/3"
+              },
+              {
+                "label": "What is the difference between mixing and mastering?",
+                "url": "https://moises.ai/4"
+              }
+            ]
+          },
+          {
+            "name": "MADE FOR",
+            "list": [
+              {
+                "label": "Drummers",
+                "url": "https://moises.ai/1"
+              },
+              {
+                "label": "Singers",
+                "url": "https://moises.ai/2"
+              },
+              {
+                "label": "Bassists",
+                "url": "https://moises.ai/3"
+              },
+              {
+                "label": "Guitarists",
+                "url": "https://moises.ai/4"
+              },
+              {
+                "label": "Producers and DJ's",
+                "url": "https://moises.ai/5"
+              }
+            ]
+          },
+          {
+            "name": "PRODUCTS",
+            "list": [
+              {
+                "label": "Moises App",
+                "url": "https://moises.ai/1"
+              },
+              {
+                "label": "Moises Web App",
+                "url": "https://moises.ai/2"
+              },
+              {
+                "label": "Moises iPad App",
+                "url": "https://moises.ai/3"
+              }
+            ]
+          },
+          {
+            "name": "COMPANY",
+            "list": [
+              {
+                "label": "Education",
+                "url": "https://moises.ai/1"
+              },
+              {
+                "label": "Business API",
+                "url": "https://moises.ai/1"
+              },
+              {
+                "label": "FAQ",
+                "url": "https://moises.ai/1"
+              },
+              {
+                "label": "Privacy",
+                "url": "https://moises.ai/2"
+              },
+              {
+                "label": "Terms",
+                "url": "https://moises.ai/3"
+              },
+              {
+                "label": "Blog",
+                "url": "https://moises.ai/3"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "slug": "pt-BR",
+      "locale": "pt-BR",
+      "seo": {
+        "description": "O melhor app para praticar música. Remova vocais, separe instrumentos, masterize faixas e remixe músicas com o poder da Inteligência Artificial. Experimente agora!",
+        "title": "Moises App: O Aplicativo do Músico | Vocal Remover & muito mais Moises App"
+      },
+      "menu": [
+        {
+          "item": "Produtos",
+          "subitems": [
+            { "item": "Aplicativo Moises" },
+            { "item": "Aplicativo Moises Web" },
+            { "item": "Aplicativo Moises IPad" }
+          ]
+        },
+        {
+          "item": "Funcionalidades",
+          "subitems": [
+            { "item": "Separação de Áudio com I.A." },
+            { "item": "Metrônomo Inteligente & Mudança de Velocidade" },
+            { "item": "Detecção & Transposição de Tom com I.A." },
+            { "item": "Visualização de Cifras" },
+            { "item": "AI Songwriter" }
+          ]
+        },
+        {
+          "item": "Feito Para",
+          "subitems": [
+            { "item": "Bateristas" },
+            { "item": "Cantores" },
+            { "item": "Baixistas" },
+            { "item": "Guitarristas" },
+            { "item": "Produtores e DJ's" }
+          ]
+        },
+        { "item": "Educação" },
+        { "item": "Business API" },
+        { "item": "Blog" },
+        { "item": "Entrar" },
+        { "item": "Cadastre-se" }
+      ],
+      "contentSections": [
+        {
+          "name": "hero",
+          "data": {
+            "backgroundImage": "https://moises.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2Fhome_01_ghost_highlight_desktop_67eb8566fc%2Fhome_01_ghost_highlight_desktop_67eb8566fc.png&w=3840&q=100",
+            "title": "O App do Músico",
+            "description": "Toque com seu artista favorito em qualquer tom ou velocidade. Remova vocais e instrumentos de qualquer música. Descubra a melhor experiência de prática imersiva com a tecnologia da Inteligência Artificial.",
+            "ctaButton": "Comece já",
+            "belowLinks": "EXPERIMENTE GRÁTIS",
+            "links": [
+              {
+                "image": "https://storage.googleapis.com/moises-cms/app_store_3279bb50bd/app_store_3279bb50bd.svg",
+                "url": "https://apps.apple.com/app/apple-store/id1515796612?pt=121597498&ct=home_hero&mt=8"
+              },
+              {
+                "image": "https://storage.googleapis.com/moises-cms/app_google_play_1_3cdc01c8aa/app_google_play_1_3cdc01c8aa.svg",
+                "url": "https://play.google.com/store/apps/details?id=ai.moises&referrer=utm_source%3Dhome_hero%26utm_medium%3Dwww%26utm_campaign%3Dhome_hero"
+              }
+            ]
+          }
+        },
+        {
+          "name": "simple_horizontal",
+          "data": {
+            "title": "Mais do que um app. Um parceiro musical.",
+            "subtitle": "Sua biblioteca privada pode ser acessada de qualquer dispositivo, armazenada com segurança na nuvem.",
+            "image": "https://moises.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2FDevices_wiht_ipad_bce87d9f5f%2FDevices_wiht_ipad_bce87d9f5f.png&w=3840&q=100"
+          }
+        },
+        {
+          "name": "simple_headline",
+          "data": {
+            "title": "VIRANDO O JOGO",
+            "subtitle": "Tudo em uma única experiência.",
+            "description": "Remova vozes e instrumentos de qualquer música. Ajuste a velocidade, mude o tom e ative a contagem do metrônomo."
+          }
+        },
+        {
+          "name": "stacked_list",
+          "items": [
+            {
+              "backgroundImage": "https://moises.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2Fhome_06_bg_desktop_16a77c84c4%2Fhome_06_bg_desktop_16a77c84c4.jpg&w=3840&q=100",
+              "image": "https://moises.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2Fhome_06_highlight_desktop_2x_f5e34b557c%2Fhome_06_highlight_desktop_2x_f5e34b557c.png&w=1920&q=100",
+              "imagePosition": "left",
+              "ctaHighlightText": "AI Audio Separation",
+              "ctaRegularText": "Toque com seus artistas preferidos.",
+              "description": "Separe facilmente vocais, guitarra, bateria, baixo, piano e outros instrumentos de qualquer música. Isole instrumentos ou silencie faixas com 1 clique.",
+              "button": "Saiba Mais"
+            },
+            {
+              "backgroundImage": "https://moises.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2Fhome_07_bg_desktop_e1d405e563%2Fhome_07_bg_desktop_e1d405e563.jpg&w=3840&q=100",
+              "image": "https://moises.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2Fhome_07_highlight_desktop_2x_5bb7c24f70%2Fhome_07_highlight_desktop_2x_5bb7c24f70.png&w=1920&q=100",
+              "imagePosition": "right",
+              "ctaHighlightText": "Smart Metronome & Audio Speed Changer",
+              "ctaRegularText": "Pratique no seu ritmo.",
+              "description": "Ouça os clicks do metrônomo sincronizados com qualquer música. Diminua ou acelere o andamento com 1 clique. O Moises detecta e exibe automaticamente o BPM.",
+              "button": "Descubra Agora"
+            },
+            {
+              "backgroundImage": "https://moises.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2Fhome_08_bg_desktop_713dd9329e%2Fhome_08_bg_desktop_713dd9329e.jpg&w=828&q=100",
+              "image": "https://moises.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2Fhome_08_highlight_desktop_2x_7a99141994%2Fhome_08_highlight_desktop_2x_7a99141994.png&w=1920&q=100",
+              "imagePosition": "left",
+              "ctaHighlightText": "Pitch Changer & AI Key Detection",
+              "ctaRegularText": "Criatividade sem limites.",
+              "description": "Controle e mude o tom da música com 1 clique. Mude a tonalidade para adequar ao seu alcance vocal ou para tocar em qualquer tom. Aprenda o tom de qualquer música.",
+              "button": "Saiba Mais"
+            },
+            {
+              "backgroundImage": "https://moises.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2Fhome_09_bg_desktop_2f9c5a5128%2Fhome_09_bg_desktop_2f9c5a5128.jpg&w=3840&q=100",
+              "image": "https://moises.ai/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fmoises-cms%2Fhome_09_highlight_desktop_2x_bffd4776a6%2Fhome_09_highlight_desktop_2x_bffd4776a6.png&w=1920&q=100",
+              "imagePosition": "right",
+              "ctaHighlightText": "Chords Detection",
+              "ctaRegularText": "Aprimore sua técnica tocando as músicas que você ama.",
+              "description": "Detecte e exiba os acordes em tempo real. Use o Pitch Changer para transpor instantaneamente os acordes para o tom de sua escolha em qualquer música.",
+              "button": "Descubra Agora"
+            }
+          ]
+        }
+      ],
+      "footer": {
+        "sections": [
+          {
+            "name": "DICAS",
+            "list": [
+              {
+                "label": "Como remover os vocais de uma música",
+                "url": "https://moises.ai/1"
+              },
+              {
+                "label": "Como separar a voz de uma música",
+                "url": "https://moises.ai/2"
+              },
+              {
+                "label": "Como masterizar uma música",
+                "url": "https://moises.ai/3"
+              },
+              {
+                "label": "Diferença entre mixagem e masterização",
+                "url": "https://moises.ai/4"
+              }
+            ]
+          },
+          {
+            "name": "MADE FOR",
+            "list": [
+              {
+                "label": "Bateristas",
+                "url": "https://moises.ai/1"
+              },
+              {
+                "label": "Cantores",
+                "url": "https://moises.ai/2"
+              },
+              {
+                "label": "Baixistas",
+                "url": "https://moises.ai/3"
+              },
+              {
+                "label": "Guitarristas",
+                "url": "https://moises.ai/4"
+              },
+              {
+                "label": "Produtores e Dj's",
+                "url": "https://moises.ai/5"
+              }
+            ]
+          },
+          {
+            "name": "PRODUCTS",
+            "list": [
+              {
+                "label": "Moises App",
+                "url": "https://moises.ai/1"
+              },
+              {
+                "label": "Moises Web App",
+                "url": "https://moises.ai/2"
+              },
+              {
+                "label": "Moises iPad App",
+                "url": "https://moises.ai/3"
+              }
+            ]
+          },
+          {
+            "name": "COMPANY",
+            "list": [
+              {
+                "label": "Educação",
+                "url": "https://moises.ai/1"
+              },
+              {
+                "label": "Business API",
+                "url": "https://moises.ai/2"
+              },
+              {
+                "label": "FAQ",
+                "url": "https://moises.ai/3"
+              },
+              {
+                "label": "Privacidade",
+                "url": "https://moises.ai/3"
+              },
+              {
+                "label": "Termos de Serviço",
+                "url": "https://moises.ai/3"
+              },
+              {
+                "label": "Blog",
+                "url": "https://moises.ai/3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

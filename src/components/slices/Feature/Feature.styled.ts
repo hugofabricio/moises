@@ -8,20 +8,21 @@ type InnerWrapperProps = {
 export const Figure = styled.figure`
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 300px;
 
-  ${media.lessThan('md')} {
+  ${media.greaterThan('xs')} {
     height: 400px;
   }
 
-  ${media.lessThan('xxs')} {
-    height: 300px;
+  ${media.greaterThan('md')} {
+    max-width: 50%;
+    height: 500px;
   }
 `
 
 export const Caption = styled.div`
   max-width: 560px;
-  padding: 80px;
+  padding: 120px 80px;
 
   ${media.lessThan('xs')} {
     padding: 40px 20px;
@@ -35,6 +36,7 @@ export const Background = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+  user-select: none;
 
   ${media.lessThan('xs')} {
     height: 70%;
@@ -47,6 +49,7 @@ export const InnerCard = styled.div.withConfig({
 })<InnerWrapperProps>`
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   ${({ reverse }) =>
     !!reverse &&

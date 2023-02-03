@@ -1,9 +1,15 @@
 const button = {
   md: {
-    borderRadius: 12,
-    fontSize: 14,
-    paddingY: 12,
-    paddingX: 20
+    borderRadius: 6,
+    fontSize: 15,
+    paddingY: 8,
+    paddingX: 24
+  },
+  lg: {
+    borderRadius: 6,
+    fontSize: 17,
+    paddingY: 8,
+    paddingX: 24
   }
 }
 

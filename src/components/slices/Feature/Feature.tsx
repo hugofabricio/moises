@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Text } from 'components/common'
+import { Button, Text } from 'components/common'
 import { Container } from 'components/helpers'
 import { FeatureSlice } from 'resources'
 
@@ -23,9 +23,21 @@ const Feature = ({ items }: FeatureProps) => (
                   )}{' '}
                   {card.ctaRegularText}
                 </Text>
-                <Text fontSize="h6" weight={500} marginTop={15}>
-                  {card.description}
-                </Text>
+                {!!card.description && (
+                  <Text fontSize="h6" weight={500} marginTop={15}>
+                    {card.description}
+                  </Text>
+                )}
+                {!!card.button && (
+                  <Button
+                    href="#"
+                    title={card.button}
+                    fieldSize="lg"
+                    marginTop={30}
+                  >
+                    {card.button}
+                  </Button>
+                )}
               </S.Caption>
               <S.Figure>
                 <Image

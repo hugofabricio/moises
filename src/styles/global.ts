@@ -77,7 +77,12 @@ const GlobalStyle = createGlobalStyle`
     `}
   }
 
-
+  ${({ theme: { colors } }) => css`
+    ::selection {
+      color: ${colors.neutral1000};
+      background-color: ${colors.aqua500};
+    }
+  `}
 
   ol,
   ul {
@@ -93,7 +98,7 @@ const GlobalStyle = createGlobalStyle`
   button,
   a:hover,
   button:hover {
-    transition: color ease-in-out 300ms;
+    transition: color ease-in-out 300ms, background-color ease-in-out 300ms, border ease-in-out 300ms;
     text-decoration: none;
 
     &:focus {
@@ -113,6 +118,10 @@ const GlobalStyle = createGlobalStyle`
 
   label {
     display: inline-block;
+  }
+
+  img {
+    vertical-align: middle;
   }
 
   input,

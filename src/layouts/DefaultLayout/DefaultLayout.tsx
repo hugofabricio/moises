@@ -17,7 +17,7 @@ const DefaultLayout = ({
   <>
     {!!menu && <Header />}
     <S.Wrapper role="main">{children}</S.Wrapper>
-    {!!footer && <Footer />}
+    {!!footer && <Footer data={footer} />}
   </>
 )
 

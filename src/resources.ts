@@ -32,13 +32,6 @@ export type Slice =
   | { name: 'simple_horizontal' | 'simple_headline'; data: HeadlineSlice }
   | { name: 'stacked_list'; items: FeatureSlice[] }
 
-const SLICES: Record<SliceName, Slice> = {
-  hero: slices.Hero,
-  simple_horizontal: slices.Headline,
-  simple_headline: slices.Headline,
-  stacked_list: slices.Feature
-}
-
 export type Page = {
   slug: string
   locale: string

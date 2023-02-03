@@ -55,8 +55,10 @@ export const parseResponsive = (breakpoint: Breakpoint) => {
   return (...args: any) => {
     return css`
       ${media.greaterThan(breakpoint)} {
-        /* @ts-ignore */
-        ${css(...args)}
+        ${
+          /* @ts-ignore */
+          css(...args)
+        }
       }
     `
   }

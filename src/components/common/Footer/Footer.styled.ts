@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components'
-import { media } from 'utils'
+import { media, rem } from 'utils'
 
 export const Link = styled.a`
+  display: inline-block;
   font-weight: 500;
 
   ${({ theme: { colors } }) => css`

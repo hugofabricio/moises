@@ -77,14 +77,7 @@ const GlobalStyle = createGlobalStyle`
     `}
   }
 
-  :focus {
-    outline-offset: ${rem(4)};
 
-    ${({ theme: { colors } }) => css`
-      border-radius: ${rem(1)};
-      outline: 2px solid ${colors.aqua500};
-    `}
-  }
 
   ol,
   ul {
@@ -102,6 +95,15 @@ const GlobalStyle = createGlobalStyle`
   button:hover {
     transition: color ease-in-out 300ms;
     text-decoration: none;
+
+    &:focus {
+      outline-offset: ${rem(4)};
+
+      ${({ theme: { colors } }) => css`
+        border-radius: ${rem(1)};
+        outline: 2px solid ${colors.aqua500};
+      `}
+    }
   }
 
   a:not([href]):not([class]),

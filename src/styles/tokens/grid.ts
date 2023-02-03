@@ -25,7 +25,7 @@ const grid = {
     xs: 'full',
     sm: 'full',
     md: 58.66,
-    lg: 80,
+    lg: 78.66,
     xl: 85.33,
     xxl: 96
   },

@@ -1,7 +1,7 @@
 import { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 import { pagesService } from 'services'
 import { DefaultLayout } from 'layouts'
-import { Seo } from 'components/helpers'
+import { Seo, SliceRoot } from 'components/helpers'
 
 export const getStaticProps = async ({ locale }: GetStaticPropsContext) => {
   const page = await pagesService.getPageForLocale('', locale)
@@ -13,16 +13,19 @@ export const getStaticProps = async ({ locale }: GetStaticPropsContext) => {
   }
 
   return {
-    props: { page }
+    props: {
+      page
+    }
   }
 }
 
 const Home = ({ page }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const { seo } = page
+  const { seo, contentSections } = page
 
   return (
-    <DefaultLayout>
+    <DefaultLayout menu={page.menu} footer={page.footer}>
       <Seo title={seo.title} description={seo.description} />
+      <SliceRoot data={contentSections} />
     </DefaultLayout>
   )
 }

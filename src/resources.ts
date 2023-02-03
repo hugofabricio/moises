@@ -20,8 +20,8 @@ export type HeadlineSlice = {
 export type FeatureSlice = {
   ctaHighlightText: string
   ctaRegularText: string
-  description: string
-  button: string
+  description?: string
+  button?: string
   image: string
   imagePosition: 'left' | 'right'
   backgroundImage: string

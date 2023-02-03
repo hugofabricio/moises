@@ -2,26 +2,23 @@
 
 ## Components
 
-### App
-
-- [ ] Hero
-- [ ] Feature
-- [ ] Store
-- [ ] Social
-
-### Common
-
-- [ ] Brand
 - [ ] Header
-- [ ] Footer
 - [ ] Button
-- [ ] Text
-- [ ] Vector
+- [ ] Feature
+- [ ] Headline
+- [ ] Hero
+- [x] Brand
+- [x] Footer
+- [x] LocaleSwitch
+- [x] Social
+- [x] Text
+- [x] Vector
+- [x] Label
+- [x] Select
+- [x] Container
+- [x] Seo
+- [x] SliceRoot
 
-### Fields
-
-- [ ] Select
-
-## Layouts
+# Layouts
 
 - [x] DefaultLayout

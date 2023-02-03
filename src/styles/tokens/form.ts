@@ -1,10 +1,10 @@
 const form = {
   input: {
     md: {
-      borderRadius: 4,
-      fontSize: 16,
-      paddingY: 12,
-      paddingX: 24
+      borderRadius: 6,
+      fontSize: 15,
+      paddingY: 8,
+      paddingX: 12
     }
   }
 }

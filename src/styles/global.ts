@@ -37,19 +37,17 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  @media not all and (min-resolution: .001dpcm) {
+    img[loading="lazy"] {
+      clip-path: inset(0.5px);
+    }
+  }
+
   html {
     font-size: 15px;
-    line-height: 1.5;
+    line-height: 1.3;
     touch-action: manipulation;
     font-family: ${geomanist.style.fontFamily};
-
-    ${media.lessThan('sm')} {
-      font-size: 14px;
-    }
-
-    ${media.lessThan('xxs')} {
-      font-size: 13px;
-    }
   }
 
   body {
@@ -94,21 +92,19 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 700;
   }
 
+  :focus {
+    ${({ theme: { colors } }) => css`
+      outline-offset: 4px;
+      outline: 2px solid ${colors.aqua500};
+    `}
+  }
+
   a,
   button,
   a:hover,
   button:hover {
     transition: color ease-in-out 300ms, background-color ease-in-out 300ms, border ease-in-out 300ms;
     text-decoration: none;
-
-    &:focus {
-      outline-offset: ${rem(4)};
-
-      ${({ theme: { colors } }) => css`
-        border-radius: ${rem(1)};
-        outline: 2px solid ${colors.aqua500};
-      `}
-    }
   }
 
   a:not([href]):not([class]),

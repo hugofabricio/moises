@@ -33,10 +33,6 @@ export const Button = styled.button.withConfig({
   font-size: ${({ theme: { button }, fieldSize }) =>
     rem(button[fieldSize].fontSize)};
 
-  &:focus {
-    outline: 0;
-  }
-
   &:disabled {
     pointer-events: none;
     opacity: 0.4;

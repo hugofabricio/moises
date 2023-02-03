@@ -31,6 +31,7 @@ export interface TextProps extends MarginProps {
   uppercase?: boolean
   opacity?: string | number
   dangerouslySetInnerHTML?: { __html: string }
+  maxWidth?: Size
   tabIndex?: number
 }
 

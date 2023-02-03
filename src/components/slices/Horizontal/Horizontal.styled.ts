@@ -5,9 +5,12 @@ export const Content = styled.div`
   flex-direction: column;
   place-items: center;
   text-align: center;
+  padding: 60px 0 60px;
   gap: 15px;
 `
 
 export const Wrapper = styled.section`
-  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
 `

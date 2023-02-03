@@ -4,7 +4,7 @@ import * as S from './SliceRoot.styled'
 
 const SLICES: Record<Slice['name'], any> = {
   hero: slices.Hero,
-  simple_horizontal: slices.Headline,
+  simple_horizontal: slices.Horizontal,
   simple_headline: slices.Headline,
   stacked_list: slices.Feature
 }

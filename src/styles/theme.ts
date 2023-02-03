@@ -1,7 +1,7 @@
 import * as tokens from './tokens'
 
 const theme = {
-  breakpoints: tokens.breakpoints,
+  grid: tokens.grid,
   colors: tokens.colors,
   typography: tokens.typography,
   button: tokens.button,

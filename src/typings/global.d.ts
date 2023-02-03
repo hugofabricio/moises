@@ -20,4 +20,22 @@ declare global {
     xl?: T
     xxl?: T
   }
+
+  type Size = string | number
+
+  type MarginProps = {
+    marginTop?: Size
+    marginRight?: Size
+    marginBottom?: Size
+    marginLeft?: Size
+  }
+
+  type PaddingProps = {
+    paddingTop?: Size
+    paddingRight?: Size
+    paddingBottom?: Size
+    paddingLeft?: Size
+  }
+
+  type SpacingProps = MarginProps & PaddingProps
 }

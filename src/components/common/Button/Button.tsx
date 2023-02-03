@@ -37,7 +37,6 @@ type ButtonProps = ButtonAsButton | ButtonAsExternal | ButtonAsLink
 
 const Button = ({
   tag = 'link',
-  className,
   children,
   appearance = 'solid',
   fieldSize = 'md',

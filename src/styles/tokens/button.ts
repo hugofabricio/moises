@@ -3,13 +3,13 @@ const button = {
     borderRadius: 6,
     fontSize: 15,
     paddingY: 8,
-    paddingX: 24
+    paddingX: 20
   },
   lg: {
     borderRadius: 6,
     fontSize: 17,
     paddingY: 8,
-    paddingX: 24
+    paddingX: 20
   }
 }
 

@@ -1,6 +1,6 @@
 import { createGlobalStyle, css } from 'styled-components'
 import localFont from '@next/font/local'
-import { media, rem } from 'utils'
+import { media } from 'utils'
 
 const geomanist = localFont({
   src: [
@@ -45,9 +45,13 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: 15px;
-    line-height: 1.3;
+    line-height: 1.4;
     touch-action: manipulation;
     font-family: ${geomanist.style.fontFamily};
+
+    ${media.lessThan('xs')} {
+      line-height: 1.3;
+    }
   }
 
   body {

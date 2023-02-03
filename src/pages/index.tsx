@@ -4,7 +4,7 @@ import { DefaultLayout } from 'layouts'
 import { Seo, SliceRoot } from 'components/helpers'
 
 export const getStaticProps = async ({ locale }: GetStaticPropsContext) => {
-  const page = await pagesService.getPageForLocale('', locale)
+  const page = await pagesService.getPageForLocale('cms-payload.json', locale)
 
   if (!page) {
     return {

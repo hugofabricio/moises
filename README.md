@@ -3,10 +3,10 @@
 ## Components
 
 - [ ] Header
-- [ ] Button
-- [ ] Feature
-- [ ] Headline
 - [ ] Hero
+- [ ] Headline
+- [x] Button
+- [x] Feature
 - [x] Brand
 - [x] Footer
 - [x] LocaleSwitch

@@ -121,6 +121,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   img {
+    border: 0;
     vertical-align: middle;
   }
 

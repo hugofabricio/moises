@@ -15,6 +15,7 @@ const pages = {
     }
 
     const data: PagesResponse = await response.json()
+
     const page = data.pages.find((page) => page.locale === locale)
 
     if (!page) {

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { between } from 'polished'
 import { parseSize, rem } from 'utils'
 import { TextProps } from './Text'
 
@@ -19,6 +20,7 @@ export const Wrapper = styled.p.withConfig({
       'fontSize',
       'lineHeight',
       'letterSpacing',
+      'maxWidth',
       'marginTop',
       'marginRight',
       'marginBottom',
@@ -36,6 +38,17 @@ export const Wrapper = styled.p.withConfig({
     }
   `}
 
+${({ theme: { typography, grid }, fontSize }) =>
+    !!fontSize &&
+    css`
+      font-size: ${between(
+        `${typography.sizes[fontSize].min}px`,
+        `${typography.sizes[fontSize].max}px`,
+        `${grid.breakpoints.xxxs * 15}px`,
+        `${grid.breakpoints.xl * 15}px`
+      )};
+    `}
+
   ${({ weight }) => !!weight && `font-weight: ${weight};`}
 
   ${({ opacity }) => !!opacity && `opacity: ${opacity};`}
@@ -44,13 +57,12 @@ export const Wrapper = styled.p.withConfig({
 
   ${({ textAlign }) => !!textAlign && `text-align: ${textAlign};`}
 
-  ${({ theme: { typography }, fontSize }) =>
-    !!fontSize && `font-size: ${rem(typography.sizes[fontSize])};`}
-
   ${({ lineHeight }) => !!lineHeight && `line-height: ${rem(lineHeight)};`}
 
   ${({ letterSpacing }) =>
     !!letterSpacing && `letter-spacing: ${rem(letterSpacing)};`}
+
+  ${({ maxWidth }) => !!maxWidth && `max-width: ${parseSize(maxWidth)};`}
 
   ${({ marginTop }) => !!marginTop && `margin-top: ${parseSize(marginTop)};`}
 

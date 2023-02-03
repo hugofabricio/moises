@@ -4,7 +4,6 @@ import { HeroSlice } from 'resources'
 import * as S from './Hero.styled'
 
 interface HeroProps {
-  name: 'hero'
   data: HeroSlice
 }
 

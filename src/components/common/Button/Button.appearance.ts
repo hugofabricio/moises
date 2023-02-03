@@ -18,10 +18,6 @@ const getAppearance = ({ appearance }: ButtonAppearanceProps) => {
           background-color: ${colors.aqua500};
           border-color: ${colors.aqua500};
         }
-
-        &:focus {
-          box-shadow: 0 0 0 2px ${colors.aqua500};
-        }
       `}
     `,
     link: css`

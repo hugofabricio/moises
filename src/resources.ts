@@ -13,7 +13,12 @@ export type HeroSlice = {
 export type HeadlineSlice = {
   title: string
   subtitle: string
-  description?: string
+  description: string
+}
+
+export type HorizontalSlice = {
+  title: string
+  subtitle: string
   image: string
 }
 
@@ -29,7 +34,8 @@ export type FeatureSlice = {
 
 export type Slice =
   | { name: 'hero'; data: HeroSlice }
-  | { name: 'simple_horizontal' | 'simple_headline'; data: HeadlineSlice }
+  | { name: 'simple_headline'; data: HeadlineSlice }
+  | { name: 'simple_horizontal'; data: HorizontalSlice }
   | { name: 'stacked_list'; items: FeatureSlice[] }
 
 export type Page = {

@@ -34,11 +34,6 @@ export const Field = styled.select<FieldProps>`
       ${rem(input[fieldSize].paddingX * 2)} ${rem(input[fieldSize].paddingY)}
       ${rem(input[fieldSize].paddingX)};
 
-    &:focus {
-      box-shadow: 0 0 0 2px ${colors.aqua500};
-      outline: 0;
-    }
-
     &:disabled {
       cursor: not-allowed;
     }

@@ -6,10 +6,11 @@ export interface LinkProps extends NextLinkProps {
   className?: string
   activeClassName?: string
   partiallyActive?: boolean
+  title?: string
 }
 
 const Link = ({
-  className,
+  className = '',
   activeClassName = 'active',
   partiallyActive = true,
   children,

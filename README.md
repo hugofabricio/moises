@@ -1,24 +1,23 @@
 # Moises App
 
-## Components
+## Solução
 
-- [ ] Header
-- [ ] Hero
-- [ ] Headline
-- [x] Button
-- [x] Feature
-- [x] Brand
-- [x] Footer
-- [x] LocaleSwitch
-- [x] Social
-- [x] Text
-- [x] Vector
-- [x] Label
-- [x] Select
-- [x] Container
-- [x] Seo
-- [x] SliceRoot
+Desenvolvimento da home parcial do [Moises.app](https://moises.ai/)
 
-# Layouts
+## Como rodar os testes
 
-- [x] DefaultLayout
+No terminal, execute os comandos:
+
+```bash
+cd moises
+yarn
+yarn dev
+```
+
+Ou usando o NPM:
+
+```bash
+cd moises
+npm install
+npm dev
+```

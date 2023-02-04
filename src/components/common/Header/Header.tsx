@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router'
 import { Page } from 'resources'
 import { useHeader } from 'hooks'
 import { Container, Hamburguer, Link } from 'components/helpers'
@@ -14,7 +13,6 @@ interface HeaderProps {
 }
 
 const Header = ({ data = [] }: HeaderProps) => {
-  const router = useRouter()
   const { affixed, opened, solidButton, onHandleMenu } = useHeader()
 
   const isAffixed = affixed ? `is-affixed` : ``
@@ -27,7 +25,7 @@ const Header = ({ data = [] }: HeaderProps) => {
     <S.Wrapper className={`${isAffixed} ${isOpened}`}>
       <Container>
         <S.Bar>
-          <Link href="/" locale={router.locale}>
+          <Link href="/" title="Moises">
             <Brand appearance="icon" width={40} height={22} />
           </Link>
           <S.Menu>

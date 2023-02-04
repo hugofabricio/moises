@@ -43,7 +43,7 @@ const HeaderMenuItem = ({ id, label, subMenu = [] }: HeaderMenuItemProps) => {
 
   return (
     <S.Item>
-      <Button {...buttonProps} appearance="link" fieldSize="lg">
+      <Button {...buttonProps} appearance="link">
         {label}
       </Button>
       {hasSubmenu && (

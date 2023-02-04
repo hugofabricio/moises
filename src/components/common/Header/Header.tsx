@@ -50,7 +50,6 @@ const Header = ({ data = [] }: HeaderProps) => {
                       href={item}
                       title={item}
                       appearance={i === solidButton ? 'solid' : 'link'}
-                      fieldSize="lg"
                       fluidOnMobile
                     >
                       {item}

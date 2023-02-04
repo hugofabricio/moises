@@ -117,6 +117,7 @@ export const Group = styled.div`
     ${({ theme: { colors } }) => css`
       &:first-of-type {
         overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
 
         ::-webkit-scrollbar {
           width: 10px;

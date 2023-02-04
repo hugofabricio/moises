@@ -2,11 +2,12 @@ import { useRouter } from 'next/router'
 import { Page } from 'resources'
 import { useHeader } from 'hooks'
 import { Container, Hamburguer, Link } from 'components/helpers'
-import HeaderMenuItem from './HeaderMenuItem'
+
 import Brand from '../Brand'
+import HeaderMenuItem from './HeaderMenuItem'
+import { Button } from '..'
 
 import * as S from './Header.styled'
-import { Button } from '..'
 
 interface HeaderProps {
   data?: Page['menu']
@@ -14,8 +15,7 @@ interface HeaderProps {
 
 const Header = ({ data = [] }: HeaderProps) => {
   const router = useRouter()
-  const { affixed, opened, onHandleMenu, minWidthForDestkopMenu, width } =
-    useHeader()
+  const { affixed, opened, solidButton, onHandleMenu } = useHeader()
 
   const isAffixed = affixed ? `is-affixed` : ``
   const isOpened = opened ? `is-opened` : ``
@@ -45,31 +45,20 @@ const Header = ({ data = [] }: HeaderProps) => {
             </S.Group>
             <S.Group>
               <S.List>
-                {useMenu.map(({ item }, i) => {
-                  const isFirstItemOnMobile =
-                    i === 0 && width <= minWidthForDestkopMenu
-                  const isLastItemOnDesktop =
-                    i + 1 === useMenu.length && width > minWidthForDestkopMenu
-                  const appearance =
-                    isFirstItemOnMobile || isLastItemOnDesktop
-                      ? 'solid'
-                      : 'link'
-
-                  return (
-                    <S.Item key={item}>
-                      <Button
-                        tag="link"
-                        href={item}
-                        title={item}
-                        appearance={appearance}
-                        fieldSize="lg"
-                        fluidOnMobile
-                      >
-                        {item}
-                      </Button>
-                    </S.Item>
-                  )
-                })}
+                {useMenu.map(({ item }, i) => (
+                  <S.Item key={item}>
+                    <Button
+                      tag="link"
+                      href={item}
+                      title={item}
+                      appearance={i === solidButton ? 'solid' : 'link'}
+                      fieldSize="lg"
+                      fluidOnMobile
+                    >
+                      {item}
+                    </Button>
+                  </S.Item>
+                ))}
               </S.List>
             </S.Group>
           </S.Menu>

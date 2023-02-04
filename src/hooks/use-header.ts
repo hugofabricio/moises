@@ -25,6 +25,12 @@ const useHeader = (minWidthForDestkopMenu: number | undefined = 993) => {
   }, [y, affixed])
 
   useEffect(() => {
+    const solidButtonOnDesktop = width >= minWidthForDestkopMenu
+
+    handleState({ solidButton: solidButtonOnDesktop ? 1 : 0 })
+  }, [width])
+
+  useEffect(() => {
     const isDesktopAndOpenedMenu = width >= minWidthForDestkopMenu && opened
 
     if (isDesktopAndOpenedMenu) {
@@ -46,10 +52,8 @@ const useHeader = (minWidthForDestkopMenu: number | undefined = 993) => {
 
   return {
     ...state,
-    width,
     onHandleMenu,
-    onClickDropdown,
-    minWidthForDestkopMenu
+    onClickDropdown
   }
 }
 

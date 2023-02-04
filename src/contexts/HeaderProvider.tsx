@@ -6,16 +6,18 @@ import {
   useState
 } from 'react'
 
-const initialHeaderState = {
-  affixed: false,
-  opened: false,
-  expanded: false
-}
-
 export type HeaderState = {
   affixed: boolean
   opened: boolean
   expanded: boolean | string
+  solidButton: number
+}
+
+const initialHeaderState: HeaderState = {
+  affixed: false,
+  opened: false,
+  expanded: false,
+  solidButton: 1
 }
 
 export const HeaderContext = createContext<{

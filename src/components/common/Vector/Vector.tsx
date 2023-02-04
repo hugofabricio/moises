@@ -8,6 +8,7 @@ export interface VectorProps {
   color?: Color
   width?: Size
   height?: Size
+  opacity?: number
 }
 
 const Vector = ({ name, ...rest }: VectorProps) => (

@@ -1,5 +1,6 @@
 export { default as Seo } from './Seo'
 export { default as Link } from './Link'
 export { default as Container } from './Container'
+export { default as Hamburguer } from './Hamburguer'
 export { default as SliceRoot } from './SliceRoot'
 export type { LinkProps } from './Link'

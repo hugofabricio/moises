@@ -15,18 +15,18 @@ const grid = {
     xs: 1.6,
     sm: 1.6,
     md: 1.6,
-    lg: 1.6,
-    xl: 2.13,
-    xxl: 2.13
+    lg: 2,
+    xl: 2,
+    xxl: 2
   },
   container: {
     xxxs: 'full',
     xxs: 'full',
     xs: 'full',
     sm: 'full',
-    md: 58.66,
-    lg: 78.66,
-    xl: 85.33,
+    md: 'full',
+    lg: 'full',
+    xl: 88,
     xxl: 96
   },
   breakpoints: {

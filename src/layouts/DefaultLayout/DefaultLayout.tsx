@@ -2,6 +2,7 @@ import { PropsWithChildren } from 'react'
 import { Header, Footer } from 'components/common'
 
 import { Page } from 'resources'
+import { HeaderProvider } from 'contexts'
 import * as S from './DefaultLayout.styled'
 
 interface DefaultLayoutProps {
@@ -15,7 +16,11 @@ const DefaultLayout = ({
   children
 }: PropsWithChildren<DefaultLayoutProps>) => (
   <>
-    {!!menu && <Header />}
+    {!!menu && (
+      <HeaderProvider>
+        <Header data={menu} />
+      </HeaderProvider>
+    )}
     <S.Wrapper role="main">{children}</S.Wrapper>
     {!!footer && <Footer data={footer} />}
   </>

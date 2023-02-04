@@ -36,7 +36,7 @@ const Hero = ({ data }: HeroProps) => {
             {data.ctaButton}
           </Button>
           <S.Links>
-            <Text weight={500} letterSpacing={0.5} marginBottom={15}>
+            <Text weight={500} letterSpacing={0.5} marginBottom={20}>
               {data.belowLinks}
             </Text>
             <S.List>

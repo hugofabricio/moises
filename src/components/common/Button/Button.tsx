@@ -1,7 +1,8 @@
 import {
   ButtonHTMLAttributes,
   AnchorHTMLAttributes,
-  PropsWithChildren
+  PropsWithChildren,
+  ReactNode
 } from 'react'
 import { ButtonSize } from 'styled-components'
 import { Link, LinkProps } from 'components/helpers'
@@ -10,7 +11,10 @@ import * as S from './Button.styled'
 
 export type BaseButtonProps = {
   appearance?: 'solid' | 'link'
+  leftIcon?: ReactNode
+  rightIcon?: ReactNode
   fieldSize?: ButtonSize
+  fluidOnMobile?: boolean
 } & MarginProps
 
 type ButtonAsButton = ButtonHTMLAttributes<HTMLButtonElement> &
@@ -39,18 +43,43 @@ const Button = ({
   tag = 'link',
   children,
   appearance = 'solid',
+  leftIcon,
+  rightIcon,
   fieldSize = 'md',
   ...props
 }: PropsWithChildren<ButtonProps>) => {
+  let buttonConfig = []
+
+  if (!!leftIcon) {
+    buttonConfig.push(`has--left-icon`)
+  }
+
+  if (!!rightIcon) {
+    buttonConfig.push(`has--right-icon`)
+  }
+
+  const className = buttonConfig.join(' ')
+
+  const renderChildren = () => {
+    return (
+      <>
+        {leftIcon && <S.Icon>{leftIcon}</S.Icon>}
+        {children}
+        {rightIcon && <S.Icon>{rightIcon}</S.Icon>}
+      </>
+    )
+  }
+
   if (tag === 'button') {
     return (
       <S.Button
         as="button"
+        className={className}
         appearance={appearance}
         fieldSize={fieldSize}
         {...(props as ButtonAsButton)}
       >
-        {children}
+        {renderChildren()}
       </S.Button>
     )
   }
@@ -59,11 +88,12 @@ const Button = ({
     return (
       <S.Button
         as="a"
+        className={className}
         appearance={appearance}
         fieldSize={fieldSize}
         {...(props as ButtonAsExternal)}
       >
-        {children}
+        {renderChildren()}
       </S.Button>
     )
   }
@@ -72,11 +102,12 @@ const Button = ({
     <S.Button
       // @ts-ignore
       as={Link}
+      className={className}
       appearance={appearance}
       fieldSize={fieldSize}
       {...(props as ButtonAsLink)}
     >
-      {children}
+      {renderChildren()}
     </S.Button>
   )
 }

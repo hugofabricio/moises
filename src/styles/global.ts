@@ -29,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -96,7 +97,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 700;
   }
 
-  :focus {
+  :focus-visible {
     ${({ theme: { colors } }) => css`
       outline-offset: 4px;
       outline: 2px solid ${colors.aqua500};

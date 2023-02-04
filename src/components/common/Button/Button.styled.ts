@@ -1,19 +1,25 @@
 import styled, { css } from 'styled-components'
-import { parseSize, rem } from 'utils'
+import { media, parseSize, rem } from 'utils'
 import { BaseButtonProps } from './Button'
 import getAppearance from './Button.appearance'
 
 type WrapperProps = Pick<
   BaseButtonProps,
-  'marginTop' | 'marginRight' | 'marginBottom' | 'marginLeft'
+  'fluidOnMobile' | 'marginTop' | 'marginRight' | 'marginBottom' | 'marginLeft'
 > &
   Required<Pick<BaseButtonProps, 'appearance' | 'fieldSize'>>
+
+export const Icon = styled.i`
+  display: inline-block;
+  align-self: center;
+`
 
 export const Button = styled.button.withConfig({
   shouldForwardProp: (prop) =>
     ![
       'appearance',
       'fieldSize',
+      'fluidOnMobile',
       'marginTop',
       'marginRight',
       'marginBottom',
@@ -30,6 +36,7 @@ export const Button = styled.button.withConfig({
   background-color: transparent;
   border: 1px solid transparent;
   font-weight: 500;
+  white-space: nowrap;
   font-size: ${({ theme: { button }, fieldSize }) =>
     rem(button[fieldSize].fontSize)};
 
@@ -49,6 +56,16 @@ export const Button = styled.button.withConfig({
         ${rem(button[fieldSize].paddingX)};
     `}
 
+
+  ${({ fluidOnMobile }) =>
+    !!fluidOnMobile &&
+    css`
+      ${media.lessThan('sm')} {
+        width: 100%;
+        justify-content: center;
+      }
+    `}
+
   ${({ marginTop }) => !!marginTop && `margin-top: ${parseSize(marginTop)};`}
 
   ${({ marginBottom }) =>
@@ -59,4 +76,9 @@ export const Button = styled.button.withConfig({
 
   ${({ marginRight }) =>
     !!marginRight && `margin-right: ${parseSize(marginRight)};`}
+
+  &.has--left-icon,
+  &.has--right-icon {
+    gap: 12px;
+  }
 `

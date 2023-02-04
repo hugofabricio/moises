@@ -11,29 +11,35 @@
         {
           "item": "Products",
           "subitems": [
-            { "item": "Moises App" },
-            { "item": "Moises Web App" },
-            { "item": "Moises iPad App" }
+            { "icon": "phone", "item": "Moises App" },
+            { "icon": "laptop", "item": "Moises Web App" },
+            { "icon": "ipad", "item": "Moises iPad App" }
           ]
         },
         {
           "item": "Features",
           "subitems": [
-            { "item": "AI Audio Separation" },
-            { "item": "Smart Metronome & Audio Speed Changer" },
-            { "item": "Pitch Changer & AI Key Detection" },
-            { "item": "Chord Detection" },
-            { "item": "AI Songwriter" }
+            { "icon": "audio separation", "item": "AI Audio Separation" },
+            {
+              "icon": "smart-metronome",
+              "item": "Smart Metronome & Audio Speed Changer"
+            },
+            {
+              "icon": "pitch-changer",
+              "item": "Pitch Changer & AI Key Detection"
+            },
+            { "icon": "chord-detection", "item": "Chord Detection" },
+            { "icon": "ai-songwriter", "item": "AI Songwriter" }
           ]
         },
         {
           "item": "Made For",
           "subitems": [
-            { "item": "Drummers" },
-            { "item": "Singers" },
-            { "item": "Bassists" },
-            { "item": "Guitarists" },
-            { "item": "Producers and DJ's" }
+            { "icon": "drummers", "item": "Drummers" },
+            { "icon": "singers", "item": "Singers" },
+            { "icon": "bassists", "item": "Bassists" },
+            { "icon": "guitarists", "item": "Guitarists" },
+            { "icon": "producers", "item": "Producers and DJ's" }
           ]
         },
         { "item": "Education" },
@@ -229,29 +235,38 @@
         {
           "item": "Produtos",
           "subitems": [
-            { "item": "Aplicativo Moises" },
-            { "item": "Aplicativo Moises Web" },
-            { "item": "Aplicativo Moises IPad" }
+            { "icon": "phone", "item": "Aplicativo Moises" },
+            { "icon": "laptop", "item": "Aplicativo Moises Web" },
+            { "icon": "ipad", "item": "Aplicativo Moises IPad" }
           ]
         },
         {
           "item": "Funcionalidades",
           "subitems": [
-            { "item": "Separação de Áudio com I.A." },
-            { "item": "Metrônomo Inteligente & Mudança de Velocidade" },
-            { "item": "Detecção & Transposição de Tom com I.A." },
-            { "item": "Visualização de Cifras" },
-            { "item": "AI Songwriter" }
+            {
+              "icon": "audio separation",
+              "item": "Separação de Áudio com I.A."
+            },
+            {
+              "icon": "smart-metronome",
+              "item": "Metrônomo Inteligente & Mudança de Velocidade"
+            },
+            {
+              "icon": "pitch-changer",
+              "item": "Detecção & Transposição de Tom com I.A."
+            },
+            { "icon": "chord-detection", "item": "Visualização de Cifras" },
+            { "icon": "ai-songwriter", "item": "AI Songwriter" }
           ]
         },
         {
           "item": "Feito Para",
           "subitems": [
-            { "item": "Bateristas" },
-            { "item": "Cantores" },
-            { "item": "Baixistas" },
-            { "item": "Guitarristas" },
-            { "item": "Produtores e DJ's" }
+            { "icon": "drummers", "item": "Bateristas" },
+            { "icon": "singers", "item": "Cantores" },
+            { "icon": "bassists", "item": "Baixistas" },
+            { "icon": "guitarists", "item": "Guitarristas" },
+            { "icon": "producers", "item": "Produtores e DJ's" }
           ]
         },
         { "item": "Educação" },

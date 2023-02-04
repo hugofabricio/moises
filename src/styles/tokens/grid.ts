@@ -16,8 +16,8 @@ const grid = {
     sm: 1.6,
     md: 1.6,
     lg: 2,
-    xl: 2.13,
-    xxl: 2.13
+    xl: 2.133,
+    xxl: 2.133
   },
   container: {
     xxxs: 'full',

@@ -13,7 +13,7 @@ export const List = styled.div`
 `
 
 export const Links = styled.div`
-  margin-top: 60px;
+  margin-top: 40px;
 
   ${media.lessThan('sm')} {
     margin-top: 20px;

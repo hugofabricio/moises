@@ -22,7 +22,7 @@ const Hero = ({ data }: HeroProps) => {
             weight={500}
             opacity={0.6}
             maxWidth={700}
-            marginTop={20}
+            marginTop={10}
           >
             {data.description}
           </Text>
@@ -30,13 +30,13 @@ const Hero = ({ data }: HeroProps) => {
             href="#"
             className="cta"
             title={data.ctaButton}
-            fieldSize="lg"
+            fieldSize="xl"
             marginTop={30}
           >
             {data.ctaButton}
           </Button>
           <S.Links>
-            <Text weight={500} letterSpacing={0.5} marginBottom={20}>
+            <Text weight={500} letterSpacing={0.5} marginBottom={15}>
               {data.belowLinks}
             </Text>
             <S.List>

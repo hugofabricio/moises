@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useCallback, useContext, useEffect, useState } from 'react'
-import { useLockBodyScroll, useWindowScroll, useWindowSize } from 'react-use'
+import { useCallback, useContext, useEffect } from 'react'
+import { useWindowScroll, useWindowSize } from 'react-use'
 import { HeaderContext, HeaderState } from 'contexts'
 
 const useHeader = (minWidthForDestkopMenu: number | undefined = 993) => {
@@ -9,8 +9,6 @@ const useHeader = (minWidthForDestkopMenu: number | undefined = 993) => {
   const { y } = useWindowScroll()
 
   const { affixed, expanded, opened } = state
-
-  useLockBodyScroll(opened)
 
   const handleState = useCallback((newState: Partial<HeaderState>) => {
     setState((prevState) => ({ ...prevState, ...newState }))

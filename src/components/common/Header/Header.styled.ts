@@ -116,8 +116,7 @@ export const Group = styled.div`
   ${media.lessThan(menuMobile)} {
     ${({ theme: { colors } }) => css`
       &:first-of-type {
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
+        overflow-y: auto;
 
         ::-webkit-scrollbar {
           width: 10px;

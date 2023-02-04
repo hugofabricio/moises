@@ -49,12 +49,7 @@ const HeaderMenuItem = ({ id, label, subMenu = [] }: HeaderMenuItemProps) => {
           {subMenu.map(({ item }) => (
             <S.Item key={item}>
               <S.DropdownLink href={item} title={item}>
-                <Vector
-                  name="ai-songwriter"
-                  width={24}
-                  height={24}
-                  color="neutral600"
-                />
+                <Vector name="ai-songwriter" width={24} height={24} />
                 {item}
               </S.DropdownLink>
             </S.Item>

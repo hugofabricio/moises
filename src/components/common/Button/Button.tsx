@@ -14,6 +14,7 @@ export type BaseButtonProps = {
   leftIcon?: ReactNode
   rightIcon?: ReactNode
   fieldSize?: ButtonSize
+  fluidOnMobile?: boolean
 } & MarginProps
 
 type ButtonAsButton = ButtonHTMLAttributes<HTMLButtonElement> &

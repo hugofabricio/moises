@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components'
-import { parseSize, rem } from 'utils'
+import { media, parseSize, rem } from 'utils'
 import { BaseButtonProps } from './Button'
 import getAppearance from './Button.appearance'
 
 type WrapperProps = Pick<
   BaseButtonProps,
-  'marginTop' | 'marginRight' | 'marginBottom' | 'marginLeft'
+  'fluidOnMobile' | 'marginTop' | 'marginRight' | 'marginBottom' | 'marginLeft'
 > &
   Required<Pick<BaseButtonProps, 'appearance' | 'fieldSize'>>
 
@@ -19,6 +19,7 @@ export const Button = styled.button.withConfig({
     ![
       'appearance',
       'fieldSize',
+      'fluidOnMobile',
       'marginTop',
       'marginRight',
       'marginBottom',
@@ -53,6 +54,16 @@ export const Button = styled.button.withConfig({
       border-radius: ${rem(button[fieldSize].borderRadius)};
       padding: ${rem(button[fieldSize].paddingY)}
         ${rem(button[fieldSize].paddingX)};
+    `}
+
+
+  ${({ fluidOnMobile }) =>
+    !!fluidOnMobile &&
+    css`
+      ${media.lessThan('sm')} {
+        width: 100%;
+        justify-content: center;
+      }
     `}
 
   ${({ marginTop }) => !!marginTop && `margin-top: ${parseSize(marginTop)};`}

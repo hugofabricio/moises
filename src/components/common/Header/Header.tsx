@@ -27,7 +27,7 @@ const Header = ({ data = [] }: HeaderProps) => {
       <Container>
         <S.Bar>
           <Link href="/" locale={router.locale}>
-            <Brand appearance="icon" width={40} height={23} />
+            <Brand appearance="icon" width={40} height={22} />
           </Link>
           <S.Menu>
             <S.Group>
@@ -52,6 +52,7 @@ const Header = ({ data = [] }: HeaderProps) => {
                       title={item}
                       appearance={i + 1 === useMenu.length ? 'solid' : 'link'}
                       fieldSize="lg"
+                      fluidOnMobile
                     >
                       {item}
                     </Button>

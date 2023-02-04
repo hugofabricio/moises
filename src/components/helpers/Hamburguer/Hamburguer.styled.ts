@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 export const Bars = styled.span`
   position: relative;
-  height: 2px;
+  height: 1.4px;
 
   &:after,
   &:before {
@@ -12,11 +12,11 @@ export const Bars = styled.span`
   }
 
   &:before {
-    top: -8px;
+    top: -6px;
   }
 
   &:after {
-    bottom: -8px;
+    bottom: -6px;
   }
 
   &,
@@ -29,11 +29,17 @@ export const Bars = styled.span`
 `
 
 export const Wrapper = styled.button`
+  display: flex;
+  place-items: center;
+  flex-shrink: 0;
   width: 32px;
   height: 32px;
-  border-radius: 8px;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
   box-shadow: none;
-  border: 0;
+  cursor: pointer;
 
   ${({ theme: { colors } }) => css`
     background-color: ${colors.neutral700};
@@ -44,12 +50,32 @@ export const Wrapper = styled.button`
       &:before {
         background-color: ${colors.neutral500};
       }
+    }
 
-      &:hover {
+    &:hover {
+      background-color: ${colors.neutral400};
+
+      ${Bars} {
         &,
         &:after,
         &:before {
-          background-color: ${colors.neutral500};
+          background-color: ${colors.neutral700};
+        }
+      }
+    }
+
+    &.is-active {
+      ${Bars} {
+        transform: rotate(45deg);
+
+        &:before {
+          transform: rotate(90deg);
+          top: 0;
+        }
+
+        &:after {
+          transform: rotate(90deg);
+          bottom: 0;
         }
       }
     }

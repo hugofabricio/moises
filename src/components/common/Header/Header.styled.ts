@@ -7,10 +7,18 @@ const menuDesktop = 'md'
 
 export const Toggle = styled.div`
   margin-left: auto;
+
+  ${media.greaterThan(menuDesktop)} {
+    display: none;
+  }
 `
 
 export const Item = styled.li`
   position: relative;
+
+  ${media.lessThan(menuMobile)} {
+    width: 100%;
+  }
 `
 
 export const DropdownLink = styled.a`
@@ -18,15 +26,33 @@ export const DropdownLink = styled.a`
   gap: 12px;
   font-weight: 500;
   font-size: ${rem(16)};
-  border-radius: 8px;
-  padding: 12px;
 
   ${({ theme: { colors } }) => css`
-    color: ${colors.neutral1000};
-
-    &:hover {
+    ${media.greaterThan(menuDesktop)} {
+      padding: 12px;
+      border-radius: 8px;
       color: ${colors.neutral1000};
-      background-color: ${rgba(colors.neutral400, 0.4)};
+
+      svg {
+        color: ${colors.neutral500};
+      }
+
+      &:hover {
+        color: ${colors.neutral1000};
+        background-color: ${rgba(colors.neutral400, 0.4)};
+      }
+    }
+
+    ${media.lessThan(menuMobile)} {
+      font-size: ${rem(15)};
+
+      svg {
+        color: ${colors.aqua500};
+      }
+
+      &:hover {
+        color: ${colors.neutral0};
+      }
     }
   `}
 `
@@ -34,18 +60,20 @@ export const DropdownLink = styled.a`
 export const Dropdown = styled.ul`
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  padding: ${rem(20)} 0 0 0;
 
   ${({ theme: { colors } }) => css`
     ${media.greaterThan(menuDesktop)} {
       position: absolute;
       top: calc(100% + 10px);
       left: 50%;
+      gap: 10px;
       transform: translateX(-50%);
       padding: ${rem(20)};
       background-color: ${colors.neutral0};
       border-radius: ${rem(22)};
       width: ${rem(300)};
-      gap: 10px;
       box-shadow: 0 0 20px 10px ${rgba(colors.neutral1000, 0.1)};
       transition: all 200ms ease-in-out;
       opacity: 0;
@@ -68,26 +96,69 @@ export const List = styled.ul`
   }
 
   ${media.lessThan(menuMobile)} {
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    padding: 32px;
-    overflow-y: auto;
-    -ms-overflow-style: none;
-    gap: 20px;
+    ${({ theme: { colors } }) => css`
+      button {
+        pointer-events: none;
+        font-size: ${rem(14)};
+        color: ${colors.neutral500};
+
+        i {
+          display: none;
+        }
+      }
+    `}
   }
 `
 
-export const Group = styled.div``
+export const Group = styled.div`
+  width: 100%;
+
+  ${media.lessThan(menuMobile)} {
+    ${({ theme: { colors } }) => css`
+      &:first-of-type {
+        overflow-y: auto;
+        -ms-overflow-style: none;
+
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+          background: ${colors.neutral0};
+          border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+          background: ${colors.neutral500};
+          border-radius: 4px;
+        }
+      }
+    `}
+
+    &:last-of-type {
+      padding: 40px 0;
+    }
+
+    > ${List} {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+`
 
 export const Menu = styled.nav`
   display: flex;
   align-items: center;
   gap: 40px;
-  margin-left: auto;
-`
 
-export const Brand = styled.div``
+  ${media.greaterThan(menuDesktop)} {
+    margin-left: auto;
+  }
+
+  ${media.lessThan(menuMobile)} {
+    gap: 0;
+  }
+`
 
 export const Bar = styled.div`
   display: flex;
@@ -117,16 +188,19 @@ export const Wrapper = styled.header`
         top: 100%;
         left: 0;
         background-color: ${colors.neutral1000};
-        transform: translateX(-100%);
+        transform: translateY(100%);
         transition: all 200ms ease-in-out;
         width: 100%;
         height: calc(100vh - 90px);
         height: calc(100dvh - 90px);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 24px;
       }
 
       &.is-opened {
         ${Menu} {
-          transform: translateX(0%);
+          transform: translateY(0%);
         }
       }
     }

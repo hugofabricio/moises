@@ -4,6 +4,7 @@ import svg, { SvgProps } from 'svg'
 import * as S from './Vector.styled'
 
 export interface VectorProps {
+  className?: string
   name: SvgProps
   color?: Color
   width?: Size

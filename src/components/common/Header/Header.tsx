@@ -14,7 +14,8 @@ interface HeaderProps {
 
 const Header = ({ data = [] }: HeaderProps) => {
   const router = useRouter()
-  const { affixed, opened, onHandleMenu } = useHeader()
+  const { affixed, opened, onHandleMenu, minWidthForDestkopMenu, width } =
+    useHeader()
 
   const isAffixed = affixed ? `is-affixed` : ``
   const isOpened = opened ? `is-opened` : ``
@@ -44,20 +45,31 @@ const Header = ({ data = [] }: HeaderProps) => {
             </S.Group>
             <S.Group>
               <S.List>
-                {useMenu.map(({ item }, i) => (
-                  <S.Item key={item}>
-                    <Button
-                      tag="link"
-                      href={item}
-                      title={item}
-                      appearance={i + 1 === useMenu.length ? 'solid' : 'link'}
-                      fieldSize="lg"
-                      fluidOnMobile
-                    >
-                      {item}
-                    </Button>
-                  </S.Item>
-                ))}
+                {useMenu.map(({ item }, i) => {
+                  const isFirstItemOnMobile =
+                    i === 0 && width <= minWidthForDestkopMenu
+                  const isLastItemOnDesktop =
+                    i + 1 === useMenu.length && width > minWidthForDestkopMenu
+                  const appearance =
+                    isFirstItemOnMobile || isLastItemOnDesktop
+                      ? 'solid'
+                      : 'link'
+
+                  return (
+                    <S.Item key={item}>
+                      <Button
+                        tag="link"
+                        href={item}
+                        title={item}
+                        appearance={appearance}
+                        fieldSize="lg"
+                        fluidOnMobile
+                      >
+                        {item}
+                      </Button>
+                    </S.Item>
+                  )
+                })}
               </S.List>
             </S.Group>
           </S.Menu>

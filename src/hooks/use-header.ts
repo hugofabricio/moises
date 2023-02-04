@@ -46,8 +46,10 @@ const useHeader = (minWidthForDestkopMenu: number | undefined = 993) => {
 
   return {
     ...state,
+    width,
     onHandleMenu,
-    onClickDropdown
+    onClickDropdown,
+    minWidthForDestkopMenu
   }
 }
 

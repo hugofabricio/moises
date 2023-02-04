@@ -1,3 +1,5 @@
+import { SvgProps } from 'svg'
+
 export type HeroSlice = {
   title: string
   description: string
@@ -48,6 +50,7 @@ export type Page = {
   menu?: {
     item: string
     subitems?: {
+      icon: SvgProps
       item: string
     }[]
   }[]

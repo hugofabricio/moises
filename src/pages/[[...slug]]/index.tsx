@@ -4,7 +4,7 @@ import { DefaultLayout } from 'layouts'
 import { Seo, SliceRoot } from 'components/helpers'
 
 export const getStaticPaths = async () => {
-  const data = await pagesService.getAllPages('cms-payload.json')
+  const data = await pagesService.getAllPages()
 
   const paths = data.pages.map(({ slug, locale }) => {
     const isHome = slug.match(/\//g)?.length === undefined
@@ -21,15 +21,8 @@ export const getStaticPaths = async () => {
   }
 }
 
-export const getStaticProps = async ({
-  params,
-  locale
-}: GetStaticPropsContext) => {
-  const page = await pagesService.getPageForLocale(
-    'cms-payload.json',
-    params,
-    locale
-  )
+export const getStaticProps = async ({ locale }: GetStaticPropsContext) => {
+  const page = await pagesService.getPageForLocale(locale)
 
   return {
     props: {

@@ -25,7 +25,11 @@ export const getStaticProps = async ({
   params,
   locale
 }: GetStaticPropsContext) => {
-  const page = await pagesService.getPageForLocale('', params, locale)
+  const page = await pagesService.getPageForLocale(
+    'cms-payload.json',
+    params,
+    locale
+  )
 
   return {
     props: {

@@ -7,7 +7,20 @@ interface PagesResponse {
 }
 
 const pages = {
-  getPageForLocale: async (path: string, locale: string = '') => {
+  getAllPages: async (path: string) => {
+    const response = await fetch(`${CMS_API}/${path}`)
+
+    if (!response.ok) {
+      throw new Error(`An error occured on get data.`)
+    }
+
+    const data: PagesResponse = await response.json()
+
+    return {
+      pages: data.pages
+    }
+  },
+  getPageForLocale: async (path: string, params: any, locale: string = '') => {
     const response = await fetch(`${CMS_API}/${path}`)
 
     if (!response.ok) {

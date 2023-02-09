@@ -11,7 +11,7 @@ No terminal, execute os comandos:
 ```bash
 cd moises
 yarn
-yarn dev
+yarn run dev
 ```
 
 Ou usando o NPM:
@@ -19,5 +19,5 @@ Ou usando o NPM:
 ```bash
 cd moises
 npm install
-npm dev
+npm run dev
 ```

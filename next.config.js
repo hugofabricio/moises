@@ -3,7 +3,7 @@ const withSvgr = require('next-plugin-svgr')
 const CMS_API = process.env.NEXT_PUBLIC_CMS_API
 
 const nextConfig = async () => {
-  const response = await fetch(`${CMS_API}`)
+  const response = await fetch(`${CMS_API}/cms-payload.json`)
   const data = await response.json()
 
   const locales = data.pages.reduce((acc, page) => {

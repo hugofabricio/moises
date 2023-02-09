@@ -7,9 +7,9 @@ const nextConfig = async () => {
   const data = await response.json()
 
   const locales = data.pages.reduce((acc, page) => {
-    const hasLocaleInArray = acc.findIndex((locale) => locale === page.locale)
+    const hasLocaleArr = acc.findIndex((locale) => locale === page.locale) >= 0
 
-    if (hasLocaleInArray < 0) {
+    if (!hasLocaleArr) {
       acc.push(page.locale)
     }
 

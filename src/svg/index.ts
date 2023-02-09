@@ -1,6 +1,6 @@
 import AiSongwriter from './ai-songwriter.svg'
 import ArrowDown from './arrow-down.svg'
-import AudioSeparation from './audio separation.svg'
+import AudioSeparation from './audio-separation.svg'
 import Bassists from './bassists.svg'
 import BrandFull from './brand-full.svg'
 import BrandIcon from './brand-icon.svg'
@@ -24,7 +24,7 @@ import SocialYoutube from './social-youtube.svg'
 const svg = {
   'ai-songwriter': AiSongwriter,
   'arrow-down': ArrowDown,
-  'audio separation': AudioSeparation,
+  'audio-separation': AudioSeparation,
   'bassists': Bassists,
   'brand-full': BrandFull,
   'brand-icon': BrandIcon,

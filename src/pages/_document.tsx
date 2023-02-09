@@ -33,7 +33,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html translate="no">
         <Head>
           <link
             rel="apple-touch-icon"
@@ -56,6 +56,7 @@ export default class MyDocument extends Document {
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00dae8" />
           <meta name="msapplication-TileColor" content="#000000" />
           <meta name="theme-color" content="#000000" />
+          <meta name="google" content="notranslate" />
         </Head>
         <body>
           <Main />
